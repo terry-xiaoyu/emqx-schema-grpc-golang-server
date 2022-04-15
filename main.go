@@ -35,7 +35,7 @@ func (s *server) Parse(ctx context.Context, request *pb.ParseRequest) (*pb.Parse
 		sEnc := b64.StdEncoding.EncodeToString(request.GetData())
 		result = []byte(sEnc)
 	}
-	log.Println("parse result: ", string(result))
+	//log.Println("parse result: ", string(result))
 	return &pb.ParseResponse{
 		Code: pb.ParseResponse_SUCCESS,
 		Message: "ok",
